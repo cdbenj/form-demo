@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import {Button, TextInput, FormLabel} from 'nsw-ds-react'
+import {Button, TextInput, FormLabel, FormGroupText} from 'nsw-ds-react'
 import './App.css';
 import 'nsw-design-system/dist/css/main.css'
 
@@ -37,24 +37,20 @@ class App extends Component {
                     <div className="nsw-grid">
                         <div className="nsw-col nsw-col-lg-6 nsw-offset-lg-3">
                             <div className="nsw-section--box">
-                                <h4 className="nsw-section-title">Sign up form</h4>
                                 <form className="nsw-form" onSubmit={this.handleSubmit}>
-                                    <FormLabel text="Username" htmlFor="name"/>
-                                    <TextInput
-                                        htmlId="name"
+                                    <h4 className="nsw-section-title">Sign up form</h4>
+                                    <FormGroupText
+                                        htmlId="username"
                                         label="Username"
                                     />
-                                    <FormLabel text="Email" htmlFor="email"/>
-                                    <TextInput
+                                    <FormGroupText
                                         htmlId="email"
                                         label="Email"
-                                        type="email"
                                     />
-                                    <FormLabel text="Password" htmlFor="password"/>
-                                    <TextInput
+                                    <FormGroupText
+                                        helper="Must be at least 8 characters"
                                         htmlId="password"
                                         label="Password"
-                                        type="password"
                                     />
                                     <Button
                                         type="submit">
