@@ -1,15 +1,18 @@
 import {Component} from 'react';
-import {Button, TextInput, FormLabel, FormGroupText} from 'nsw-ds-react'
+import {Button, FormGroupText} from 'nsw-ds-react'
 import './App.css';
 import 'nsw-design-system/dist/css/main.css'
 
+
 class App extends Component {
 
+    // We create a new class that extends the core `React.Component` class.
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // We create a simple event handler function to take care of submit event
     handleSubmit(event) {
         event.preventDefault();
         if (!event.target.email.value) {
@@ -30,6 +33,11 @@ class App extends Component {
         }
     }
 
+    /*
+    Render the main lifecycle method and is the only method you must include.
+    Inside of the render() method will always be a return() that contains JSX (aka fancy HTML).
+    We add our form components like FormGroupText, Button then add in their data props htmlId, label, type (short for properties...I think)
+     */
     render() {
         return (
             <div>
